@@ -1,0 +1,82 @@
+###############################################################################
+# USERS 
+###############################################################################
+
+###
+# Get Users
+#
+GET http://localhost:5000/api/v1/users
+Content-Type: application/json
+
+###
+# Get Me
+#
+GET http://localhost:5000/api/v1/users/me
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWFjZWQ2M2UxZDBhNGQwMGMyYzk2YSIsInJvbGUiOiJhZG1pbiIsInNjb3BlIjp7InJlYWQiOnRydWUsIndyaXRlIjp0cnVlfSwiaWF0IjoxNjQ1OTI4NDI4LCJleHAiOjE2NDU5MzIwMjh9.16I4kzkkjZ2G4ipGsXDgC8pUnszI-vvl7Lf3Tju437U
+
+###
+# Register User
+#
+POST http://localhost:5000/api/v1/users/register
+Content-Type: application/json
+
+{
+    "name": "Ted White",
+    "email": "ted@gmail.com",
+    "password": "123456",
+    "active": false
+}
+
+###
+# Login User
+#
+POST http://localhost:5000/api/v1/users/login
+Content-Type: application/json
+
+{
+    "email": "test13",
+    "password": "test"
+}
+
+###############################################################################
+# GOALS
+###############################################################################
+
+
+###
+# Get Goals
+###################################################################################################
+
+GET http://localhost:5000/api/v1/goals
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWFjZTc2OGMxNmQ5MTRkNjA3ODNhZCIsInJvbGUiOiJhZG1pbiIsInNjb3BlIjp7InJlYWQiOnRydWUsIndyaXRlIjp0cnVlfSwiaWF0IjoxNjQ1OTI5NzQ5LCJleHAiOjE2NDU5MzMzNDl9.kpDbGe2-o2X_Y3HVbKjxy-HTYMYaoiHzELoRFYh5rpc
+
+
+###
+# Post Goal
+###################################################################################################
+
+POST http://localhost:5000/api/v1/goals
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWFjZTc2OGMxNmQ5MTRkNjA3ODNhZCIsInJvbGUiOiJhZG1pbiIsInNjb3BlIjp7InJlYWQiOnRydWUsIndyaXRlIjp0cnVlfSwiaWF0IjoxNjQ1OTI5NzQ5LCJleHAiOjE2NDU5MzMzNDl9.kpDbGe2-o2X_Y3HVbKjxy-HTYMYaoiHzELoRFYh5rpc
+
+{ "text": "New goal 5" }
+
+###
+# Update goal
+###################################################################################################
+
+PUT http://localhost:5000/api/v1/goals/621aec5d5d8f23944732cc01
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWFjZTc2OGMxNmQ5MTRkNjA3ODNhZCIsInJvbGUiOiJhZG1pbiIsInNjb3BlIjp7InJlYWQiOnRydWUsIndyaXRlIjp0cnVlfSwiaWF0IjoxNjQ1OTI5NzQ5LCJleHAiOjE2NDU5MzMzNDl9.kpDbGe2-o2X_Y3HVbKjxy-HTYMYaoiHzELoRFYh5rpc
+
+{ "text": "New goal 5, updated." }
+
+###
+# Delete goal
+###################################################################################################
+
+DELETE http://localhost:5000/api/v1/goals/621aec5d5d8f23944732cc01
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWFjZTc2OGMxNmQ5MTRkNjA3ODNhZCIsInJvbGUiOiJhZG1pbiIsInNjb3BlIjp7InJlYWQiOnRydWUsIndyaXRlIjp0cnVlfSwiaWF0IjoxNjQ1OTI5NzQ5LCJleHAiOjE2NDU5MzMzNDl9.kpDbGe2-o2X_Y3HVbKjxy-HTYMYaoiHzELoRFYh5rpc
